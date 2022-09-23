@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row">
+
+        <div class="col 12 12">
+
+            <h1>{{post.Title}}</h1>
+            <p>{{post.cat.title}}</p>
+            
+            <img src="/media/{{post.image}}" class="responsive-img">
+
+            <p>
+                {{post.Content}}
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

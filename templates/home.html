@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-custom">
+ {% for cat in cats %}
+    {{ cat.Title}}
+
+    {%endfor%}
+
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12">
+            {% for p in posts %}
+           <div class="row">
+
+               <div class="col s12 m8">
+
+                    {{p.Content |truncatewords:60}}
+            <div class="container">
+    <a href="/blog/{{p.url}}" class="btn btn-primary"> read more..</a>
+</div>
+               </div>
+               <div class="col s12 m4">
+                   <img src="/media/{{p.image}}" class="responsive-img">
+
+               </div>
+           </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+<div class="container">
+    <a href=""class="btn"> read more..</a>
+</div>
